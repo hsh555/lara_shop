@@ -27,8 +27,8 @@ class CreateUserAddressesTable extends Migration
             $table->string("longitude")->nullable();
             $table->string("latitude")->nullable();
 
-            $table->unsignedBigInteger("province_id");
-            $table->unsignedBigInteger("city_id");
+            $table->unsignedInteger("province_id");
+            $table->unsignedInteger("city_id");
 
             $table->timestamps();
         });
