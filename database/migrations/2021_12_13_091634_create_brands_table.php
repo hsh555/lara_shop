@@ -18,6 +18,7 @@ class CreateBrandsTable extends Migration
 
             $table->string("name");
             $table->string("slug")->unique()->nullable();
+            $table->boolean("is_active")->default(0);
 
             $table->timestamps();
         });
