@@ -7,6 +7,9 @@
 // Import Bootstrap
 @import "~bootstrap/scss/bootstrap.scss";
 
+// Import Bootstrap Select
+@import "~bootstrap-select/sass/bootstrap-select.scss";
+
 // Import Custom SB Admin 2 Mixins and Components
 @import "mixins";
 @import "global";
@@ -47,4 +50,41 @@ body {
 
 #registerCheckBox::after {
     right: -1.5rem;
+}
+
+.form-control__select {
+    border: 1px solid #d1d3e2 !important;
+
+    .dropdown-toggle {
+        outline: 0 !important;
+        background-color: #fff !important;
+
+        &:hover {
+            background-color: #fff !important;
+            outline: 0 !important;
+        }
+
+        &:active {
+            outline: 0 !important;
+        }
+
+        &:focus {
+            outline: 0 !important;
+        }
+    }
+
+    .filter-option {
+        text-align: right !important;
+        color: #777 !important;
+    }
+
+    .dropdown-item {
+        color: #777 !important;
+        background-color: unset !important;
+    }
+}
+
+.form-group__inner {
+    border: 1px solid #d1d3e2 !important;
+    background-color: #eaecf4;
 }

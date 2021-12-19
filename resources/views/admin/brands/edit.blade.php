@@ -15,11 +15,11 @@
                             <label for="brand">نام برند</label>
                             <input type="text" name="name" class="form-control" value="{{ $brand->name }}" id="brand">
                         </div>
-                        <div class="form-group col-md-4">
+                        <div class="form-group col-md-6">
                             <label for="isActive">وضعیت</label>
                             <select id="isActive" name="is_active" class="form-control">
-                                <option value="1" {{ $brand->is_active == "فعال" ?  'selected' : Null }}>فعال</option>
-                                <option value="0" {{ !$brand->is_active == "غیرفعال" ? 'selected' : Null }}>غیر فعال</option>
+                                <option value="1" {{ $brand->getRawOriginal('is_active') ?  'selected' : '' }}>فعال</option>
+                                <option value="0" {{ !$brand->getRawOriginal('is_active') ? 'selected' : '' }}>غیر فعال</option>
                             </select>
                         </div>
                     </div>

@@ -6,29 +6,26 @@
         <div class="col-12 mb-4">
             <div class=" bg-white shadow-sm rounded p-5">
                 <div class="d-flex justify-content-between align-items-center mb-4">
-                    <h5 class="font-weight-bold">لیست برندها({{ $brands->total() }})</h5>
-                    <a href="{{ route('admin.brands.create') }}" class="btn btn-primary">ایجاد برند</a>
+                    <h5 class="font-weight-bold">لیست ویژگی ها({{ $attributes->total() }})</h5>
+                    <a href="{{ route('admin.attributes.create') }}" class="btn btn-primary">ایجاد ویژگی</a>
                 </div>
                 <table class="table table-striped">
                     <thead>
                         <tr>
                             <th scope="col">#</th>
                             <th scope="col">نام</th>
-                            <th scope="col">وضعیت</th>
                             <th scope="col">عملیات</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($brands as $key => $brand)
+                        @foreach ($attributes as $key => $attribute)
                             <tr>
-                                <td>{{ $brands->firstItem() + $key }}</td>
-                                <td>{{ $brand->name }}</td>
-                                <td class="{{ $brand->getRawOriginal('is_active') ? 'text-success' : 'text-danger' }}">
-                                    {{ $brand->is_active }}</td>
+                                <td>{{ $attributes->firstItem() + $key }}</td>
+                                <td>{{ $attribute->name }}</td>
                                 <td>
-                                    <a href="{{ route('admin.brands.edit', $brand->id) }}" class="text-dark mx-2"
+                                    <a href="{{ route('admin.attributes.edit', $attribute->id) }}" class="text-dark mx-2"
                                         title="ویرایش برند"><i class="far fa-edit"></i></a>
-                                    <a href="{{ route('admin.brands.show', $brand->id) }}"
+                                    <a href="{{ route('admin.attributes.show', $attribute->id) }}"
                                         class="text-info"><i class="far fa-eye"></i></a>
                                 </td>
                             </tr>
@@ -36,7 +33,7 @@
                     </tbody>
                 </table>
                 <div class="d-flex justify-content-center mt-5">
-                    {{ $brands->links() }}
+                    {{ $attributes->links() }}
                 </div>
             </div>
         </div>

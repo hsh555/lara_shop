@@ -12,9 +12,9 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="brand">نام برند</label>
-                            <input type="text" name="name" value={{old('name')}} class="form-control" id="brand">
+                            <input type="text" name="name" value="{{old('name')}}" class="form-control" id="brand">
                         </div>
-                        <div class="form-group col-md-4">
+                        <div class="form-group col-md-6">
                             <label for="isActive">وضعیت</label>
                             <select id="isActive" name="is_active" class="form-control">
                                 <option value="1" selected>فعال</option>

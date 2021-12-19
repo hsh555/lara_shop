@@ -166,6 +166,9 @@ return array(
         'expire' => 'زمان تخفیف',
         'avatar' => 'تصویر پروفایل',
         'priority' => 'الویت',
-        'message' => 'متن پیام'
+        'message' => 'متن پیام',
+        'attribute_variation_id'=> 'ویژگی متغیر',
+        'attribute_filter_ids'=> 'ویژگی های قابل فیلتر',
+        'attribute_ids'=> 'ویژگی ها',
     ),
 );

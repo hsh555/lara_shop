@@ -21,11 +21,32 @@
     <!-- Divider -->
     <hr class="sidebar-divider">
 
-    <!-- Nav Item - Charts -->
+    <!-- Heading -->
+    <div class="sidebar-heading">
+        فروشگاه
+    </div>
+
+    <!-- Nav Item - Brands -->
     <li class="nav-item">
         <a class="nav-link" href="{{ route('admin.brands.index') }}">
             <i class="fas fa-fw fa-chart-area"></i>
             <span>برند ها</span></a>
+    </li>
+
+    <!-- Nav Item - Pages Collapse Menu -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProducts"
+            aria-expanded="true" aria-controls="collapseProducts">
+            <i class="fas fa-shopping-cart"></i>
+            <span> محصولات </span>
+        </a>
+        <div id="collapseProducts" class="collapse" aria-labelledby="headingProducts"
+            data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="{{ route('admin.attributes.index') }}"> ویژگی ها </a>
+                <a class="collapse-item" href="{{ route('admin.categories.index') }}"> دسته بندی ها </a>
+            </div>
+        </div>
     </li>
 
     <!-- Divider -->
